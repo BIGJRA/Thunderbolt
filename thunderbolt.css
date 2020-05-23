@@ -1,0 +1,61 @@
+/* TODO Your CSS here. */
+img {
+position: absolute;
+}
+
+#container {
+position: absolute;
+scale: 1;
+background-color: aqua;
+}
+
+#clouds {
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+.lightning {
+    opacity: 0.2;
+    z-index: 1;
+}
+
+#lightning1 {
+    left: 134px;
+    top: 15px;
+    transform: rotate(90deg);
+}
+
+#lightning2 {
+    left: 590px;
+    top: 15px;
+    transform: rotate(270deg);
+}
+
+#pikachu {
+    filter: grayscale(100%);
+    z-index: 2;
+    left: 188px;
+    top: 24px;
+    transform: scale(0.5,0.5) rotate(75deg);
+}
+
+#container:hover .lightning   {
+    animation: lb;
+    animation-duration: 0.2s;
+}
+
+#pikachu:hover {
+    animation: pikapi;
+    animation-duration: 3s;
+}
+
+@keyframes pikapi {
+    from {}
+    to {transform: scale(1,1) rotate(0deg)}
+}
+
+@keyframes lb {
+    from {}
+    to {opacity: 1;}
+}
